@@ -1,6 +1,6 @@
 <%@page import="java.io.*,java.net.*" contentType="text/xml; charset=UTF-8" %><%
 String queryString = request.getQueryString();
-String openapi_url = "http://api.nongsaro.go.kr/service/pesticideSalePrice/yearGubunList"+queryString;
+String openapi_url = "http://api.nongsaro.go.kr/service"+queryString;
 
 StringBuffer sbf = new StringBuffer();
 try{
