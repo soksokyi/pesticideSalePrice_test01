@@ -1,34 +1,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko"><head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta content="no-cache" http-equiv="pragma">
-  <title>농약 판매가격 Open API Ajax 샘플 페이지</title>
-  
-  <!-- 공통 CSS, JS 선언 -->
-  <link href="http://api.nongsaro.go.kr/css/api.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="http://api.nongsaro.go.kr/js/framework.js"></script>	
-  <script type="text/javascript" src="http://api.nongsaro.go.kr/js/openapi_nongsaro.js"></script>
-    
-  <script type="text/javascript">
-		nongsaroOpenApiRequest.apiKey = "202212197E6JRWZXMYKL7TWNMQXOQ";//Api Key  - 발급받은 인증키로변경
-    nongsaroOpenApiRequest.serviceName = "pesticideSalePrice";//서비스명
-    nongsaroOpenApiRequest.operationName = "yearGubunList";//오퍼레이션명 - nongsaroApiLoadingArea 영역에 로딩할 오퍼레이션 
-    nongsaroOpenApiRequest.htmlArea="nongsaroApiLoadingArea";//첫번째로 HTML을 로딩할영역 
-    nongsaroOpenApiRequest.callback = "https://github.com/soksokyi/pesticideSalePrice_test02/blob/master/ajax_local_callback.jsp";//크로스 도메인 처리를 위한 콜백페이지 - 샘플소스에 있는 콜백페이지를 서버에 올리고 올린 경로로 수정
-  </script>
-  
-  </head>
-  
-  <body>
-  <div id="nongsaroApiLoadingArea"><div class="apiContArea"><h3><p class="fl"><strong>농약 판매가격</strong></p><p class="bgRp fl"><strong class="miniF">목록</strong></p></h3><div class="fr"></div><br><br><div class="clear bbsSection"><fieldset class="sch"><legend></legend><div class="schBox"><div class="outerRound"><div class="innerRound" style="padding:5px 15px 5px 15px !important;"><div class="fl"><span class="inputW"><select id="sType" name="sType"><option value="sAgchmKoreanNm">품목명</option><option value="sAgchmBrandNm">상표명</option></select>&nbsp;&nbsp;												<input type="text" id="sText" name="sText"></span></div><div class="fr"><strong class="button medium"><a onclick="fncList(); return false;">조회</a></strong></div><div class="cLear"></div></div><div class="innerRound" style="padding:5px 15px 5px 15px !important;"><div class="fl"><strong class="nTitle" style="float:left; width:90px;"> 년도</strong><span class="inputW"><select id="yearGubun" name="yearGubun"><option value="">선택하세요.</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option></select></span></div><div class="cLear"></div></div><div id="nongsaroApiLoadingArea1" class="innerRound" style="padding:5px 15px 5px 15px !important;"><div class="fl"><strong class="nTitle" style="float:left; width:90px;">현행 분류</strong><span class="inputW"><select id="areaGubun" name="areaGubun"><option value="">선택하세요.</option><option value="경기(서울,인천포함)">경기(서울,인천포함)</option><option value="강원">강원</option><option value="충북">충북</option><option value="충남(대전 포함)">충남(대전 포함)</option><option value="전북">전북</option><option value="전남(광주 포함)">전남(광주 포함)</option><option value="경북(대구 포함)">경북(대구 포함)</option><option value="경남(부산, 울산 포함)">경남(부산, 울산 포함)</option><option value="제주">제주</option></select></span></div><div class="cLear"></div></div><div id="nongsaroApiLoadingArea2" class="innerRound" style="padding:5px 15px 5px 15px !important;"></div></div></div></fieldset></div></div></div><!-- HTML 로딩 영역 -->
-  <div id="nongsaroApiLoadingAreaResult"><div class="apiContArea"><div class="bbsSection"><div class="tabelRound"><table class="grid topLine" border="1" cellspacing="0" summary="" cellpadding="0"><caption>농약 판매가격</caption><colgroup><col width="6%"><col width="*"><col width="10%"><col width="15%"><col width="8%"><col width="15%"><col width="8%"><col width="8%"></colgroup><thead><tr><th scope="col">번호</th><th scope="col">품목명</th><th scope="col">년도</th><th scope="col">상표명</th><th scope="col">포장단위</th><th scope="col">지역</th><th scope="col">최고</th><th scope="col">최저</th></tr></thead><tbody></tbody></table></div><div class="pagination"><strong><a href="#" class="active">1</a></strong></div></div></div></div><p style="text-align: left; font-size: 12px; margin: 20px 0"><img src="http://www.nongsaro.go.kr/ps/img/nongsaroAdd/sedum/icon1.gif" alt="" style="vertical-align: middle; margin: 0 8px 0;">본 정보는 농촌진흥청의 <a href="http://www.nongsaro.go.kr" target="_blank" style="font-weight:bold;">농업기술포털 농사로(http://www.nongsaro.go.kr)</a>에서 제공하고 있습니다.</p><!-- 결과 HTML 로딩 영역 -->
-  
-  <div>
-    <a href="ajax_local_callback.jsp">
-      ajax_local_callback.jsp
-    </a>
-  </div>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="no-cache" http-equiv="pragma">
+<title>농약 판매가격 Open API Ajax 샘플 페이지</title>
 
-  </body>
+<!-- 공통 CSS, JS 선언 -->
+<link href="http://api.nongsaro.go.kr/css/api.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://api.nongsaro.go.kr/js/framework.js"></script>	
+<script type="text/javascript" src="http://api.nongsaro.go.kr/js/openapi_nongsaro.js"></script>
+	
+<script type="text/javascript">
+	nongsaroOpenApiRequest.apiKey = "202212197E6JRWZXMYKL7TWNMQXOQ";//Api Key  - 발급받은 인증키로변경
+	nongsaroOpenApiRequest.serviceName = "pesticideSalePrice";//서비스명
+	nongsaroOpenApiRequest.operationName = "yearGubunList";//오퍼레이션명 - nongsaroApiLoadingArea 영역에 로딩할 오퍼레이션 
+	nongsaroOpenApiRequest.htmlArea="nongsaroApiLoadingArea";//첫번째로 HTML을 로딩할영역 
+	nongsaroOpenApiRequest.callback = "https://soksokyi.github.io/pesticideSalePrice_test02/ajax_local_callback.jsp";//크로스 도메인 처리를 위한 콜백페이지 - 샘플소스에 있는 콜백페이지를 서버에 올리고 올린 경로로 수정
+</script>
+
+</head>
+
+<body>
+<div id="nongsaroApiLoadingArea"></div><!-- HTML 로딩 영역 -->
+<div id="nongsaroApiLoadingAreaResult"></div><!-- 결과 HTML 로딩 영역 -->
+</body>
 </html>
